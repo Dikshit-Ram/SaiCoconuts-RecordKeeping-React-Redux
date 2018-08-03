@@ -11,12 +11,12 @@
     "test": "mocha --reporter progress tools/testSetup.js \"src/**/*.test.js\"",
     "test:watch": "npm run test -- --watch"
   },
-  "author": "Cory House",
+  "author": "Dikshith Ram Adabala",
   "license": "MIT",
   "dependencies": {
     "babel-polyfill": "6.8.0",
     "bootstrap": "3.3.6",
-    "jquery": "2.2.3",
+    "jquery": "3.0.0",
     "react": "15.0.2",
     "react-dom": "15.0.2",
     "react-redux": "4.4.5",
@@ -67,6 +67,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/coryhouse/pluralsight-redux-starter"
+    "url": "https://github.com/Dikshit-Ram/SaiCoconuts-RecordKeeping-React-Redux"
   }
 }
