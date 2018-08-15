@@ -3,7 +3,9 @@ import React, {Component} from 'react';
 class Dashboard extends Component{
     render(){
         return(
-            <div>Hello, App!</div>
+            <div>
+                <img  src={require('../../images/CoconutTree.jpg')} />
+            </div>
         );
     }
 }
