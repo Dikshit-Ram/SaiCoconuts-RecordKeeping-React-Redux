@@ -3,8 +3,8 @@ import React, {Component} from 'react';
 class Dashboard extends Component{
     render(){
         return(
-            <div>
-                <img  src={require('../../images/CoconutTree.jpg')} />
+            <div id="dashboard">
+                {/*<img src={require('../../images/CoconutTree.jpg')} />*/}
             </div>
         );
     }
