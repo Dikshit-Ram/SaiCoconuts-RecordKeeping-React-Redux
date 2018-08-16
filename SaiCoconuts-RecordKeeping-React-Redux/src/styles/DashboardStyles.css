@@ -2,3 +2,7 @@
     background-size:     cover;                      /* <------ */
     background: url("../images/CoconutTree.jpg") no-repeat center center;
 }
+
+p {
+    color: blue;
+}
