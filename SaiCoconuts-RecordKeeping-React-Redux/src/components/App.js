@@ -1,13 +1,14 @@
 import React, {Component, PropTypes} from 'react';
 import Header from "./common/Header";
 import Dashboard from "./dashboard/Dashboard";
+import '../styles/DashboardStyles.css';
 
 class App extends Component {
     render(){
         return(
-            <div className="container-fluid">
+            <div id="dashboard" className="container-fluid">
                 <Header/>
-                <Dashboard/>
+                <Dashboard />
                 <p>{this.props.children}</p>
             </div>
         );
