@@ -1,14 +1,15 @@
 import React, {Component} from 'react';
+import '../../styles/TransactionCardStyles.css';
+import TransactionImage from '../../images/TransactionCard.jpg';
 
 class TransactionCard extends Component{
     render(){
         return(
             <div className="container">
-                <div className="card" >
-                    <img className="card-img-top" src="../../images/TransactionCard.jpg" alt="Card image cap" />
+                <div id="TransactionCard" className="card" >
+                    <img className="card-img-top" src={TransactionImage} alt="Transaction Image" />
                     <div className="card-body">
-                        <p className="card-text">Some quick example text to build on the card title and make up the
-                            bulk of the card's content.</p>
+                        <a href="#" className="btn btn-primary">Quick Sell</a>
                     </div>
                 </div>
             </div>

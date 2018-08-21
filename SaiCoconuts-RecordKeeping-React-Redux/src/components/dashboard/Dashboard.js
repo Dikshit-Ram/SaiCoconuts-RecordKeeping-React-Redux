@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import '../../styles/AppStyles.css';
-import Header from "../common/Header";
 import TransactionCard from "../cards/TransactionCard";
 
 class Dashboard extends Component{
