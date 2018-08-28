@@ -1,0 +1,9 @@
+#dashboard {
+    background-size:     cover;                      /* <------ */
+    background: url("../images/CoconutTree.jpg") no-repeat center center;
+    height: 100vh;
+}
+
+p {
+    color: blue;
+}
