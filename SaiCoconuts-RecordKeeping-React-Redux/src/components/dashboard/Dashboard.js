@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
 import '../../styles/AppStyles.css';
 import TransactionCard from "../cards/TransactionCard";
 
@@ -18,4 +17,4 @@ class Dashboard extends Component{
         );
     }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
+export default Dashboard;

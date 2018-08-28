@@ -13,13 +13,9 @@ class App extends Component {
                         <Dashboard />
                     </div>
                 </div>
-                <p>{this.props.children}</p>
             </div>
         );
     }
 }
-// noinspection JSAnnotator
-App.propTypes = {
-    children: PropTypes.object.isRequired
-};
+
 export default App;
