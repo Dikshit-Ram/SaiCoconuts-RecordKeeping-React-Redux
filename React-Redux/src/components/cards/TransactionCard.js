@@ -1,8 +1,10 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import * as transactionActions from '../../actions/TransactionActions';
 import '../../styles/TransactionCardStyles.css';
 import TransactionImage from '../../images/TransactionCard.jpg';
+import PropTypes from 'prop-types';
+
 
 class TransactionCard extends Component{
     onClickDisplayForm() {
