@@ -1,6 +1,7 @@
 export default function displayTransactionFormReducer(state =[], action) {
+    //debugger;
     switch (action) {
-        case 'DISPLAY_TRANSACTION_FORM':
+        case 'CREATE_TRANSACTION_SUCCESS':
             return [...state,
             Object.assign({}, action.transaction)
             ];
