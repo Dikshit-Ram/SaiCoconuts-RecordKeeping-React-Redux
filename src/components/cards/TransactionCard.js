@@ -7,11 +7,11 @@ import TransactionImage from '../../images/TransactionCard.jpg';
 class TransactionCard extends Component{
 
     state = {
-        displayForm: true
+        displayForm: false
     }
 
     onClickDisplayForm() {
-        this.props.dispatch(transactionActions.displayTransactionForm(this.state.displayTransactionForm));
+        this.props.dispatch(transactionActions.displayTransactionForm(this.state.displayForm));
     }
 
     render(){
@@ -31,12 +31,12 @@ class TransactionCard extends Component{
 
 function mapStateToProps(state, ownProps) {
     return {
-        displayTransactionForm: state.displayTransactionForm
+        displayTransactionForm: state.displayForm
     };
 }
 
 TransactionCard.propTypes = {
-    dispatch: PropTypes.func.isRequired
+    displayTransactionForm: PropTypes.func.isRequired
 };
 
 export default connect(mapStateToProps)(TransactionCard);
