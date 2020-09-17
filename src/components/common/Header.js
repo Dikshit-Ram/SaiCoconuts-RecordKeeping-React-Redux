@@ -1,13 +1,20 @@
-import React from 'react';
-import {IndexLink} from 'react-router';
+import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
-    return (
-        <nav>
-            <h1>Welcome to Sai coconut record keeping</h1>
-            <IndexLink to="/" activeClassName="active">Home</IndexLink>
-        </nav>
-    );
+  return (
+    <header className="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+      <NavLink
+        exact
+        to="/"
+        activeClassName="active"
+        activeStyle={{ fontWeight: "bold" }}
+      >
+        Home
+      </NavLink>
+      <h1>Welcome to Sai coconut record keeping</h1>
+    </header>
+  );
 };
 
 export default Header;

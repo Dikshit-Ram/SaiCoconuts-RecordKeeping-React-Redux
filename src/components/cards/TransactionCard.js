@@ -1,21 +1,19 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import PropTypes from "prop-types";
+import { bindActionCreators } from "redux";
 import * as transactionActions from '../../actions/TransactionActions';
 import '../../styles/TransactionCardStyles.css';
 import TransactionImage from '../../images/TransactionCard.jpg';
 
 class TransactionCard extends Component{
 
-    state = {
-        displayForm: false
-    }
-
     onClickDisplayForm() {
-        this.props.dispatch(transactionActions.displayTransactionForm(this.state.displayForm));
+        this.props.actions.displayTransactionForm(this.props.displayForm);
     }
 
     render(){
-        return(
+        const displayCard = (
             <div className="container">
                 <div id="TransactionCard" className="card" >
                     <img className="card-img-top" src={TransactionImage} alt="Transaction Image" />
@@ -25,18 +23,36 @@ class TransactionCard extends Component{
                 </div>
             </div>
         );
+        const displayFormEl = (
+            <div className="container">
+                <div id="TransactionCard" className="card" >
+                    <img className="card-img-top" src={TransactionImage} alt="Transaction Image" />
+                    <div className="card-body">
+                        <a href="#" className="btn btn-primary" onClick={this.onClickDisplayForm.bind(this)}>Sell</a>
+                    </div>
+                </div>
+            </div>
+        );
+        return this.props.displayForm ? displayFormEl : displayCard;
     }
 
 }
 
-function mapStateToProps(state, ownProps) {
+function mapStateToProps(state) {
     return {
-        displayTransactionForm: state.displayForm
+        displayForm: state.displayTransactionForm
     };
 }
 
+function mapDispatchToProps(dispatch) {
+    return {
+      actions: bindActionCreators(transactionActions, dispatch)
+    };
+  }
+
 TransactionCard.propTypes = {
-    displayTransactionForm: PropTypes.func.isRequired
+    displayForm: PropTypes.bool.isRequired,
+    actions: PropTypes.object.isRequired
 };
 
-export default connect(mapStateToProps)(TransactionCard);
+export default connect(mapStateToProps, mapDispatchToProps)(TransactionCard);
