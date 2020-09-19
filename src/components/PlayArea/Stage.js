@@ -2,12 +2,17 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import TransactionPlay from "./TransactionPlay";
+import "../../styles/StageStyles.css";
 
 class Stage extends Component {
   render() {
     switch (this.props.show) {
       case "TRANSACTION_PLAY":
-        return <TransactionPlay />;
+        return (
+          <div className="container-fluid">
+            <TransactionPlay />
+          </div>
+        );
       default:
         return null;
     }
