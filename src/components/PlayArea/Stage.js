@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import TransactionPlay from "./TransactionPlay";
 import "../../styles/StageStyles.css";
+import TransactionPlay from "./TransactionPlay";
+import HistoryPlay from "./HistoryPlay";
 
 class Stage extends Component {
   render() {
@@ -11,6 +12,12 @@ class Stage extends Component {
         return (
           <div className="container-fluid">
             <TransactionPlay />
+          </div>
+        );
+      case "HISTORY_PLAY":
+        return (
+          <div className="container-fluid">
+            <HistoryPlay />
           </div>
         );
       default:
