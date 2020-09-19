@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import "../../styles/StageStyles.css";
 import TransactionPlay from "./TransactionPlay";
 import HistoryPlay from "./HistoryPlay";
+import CustomerPlay from "./CutomerPlay";
 
 class Stage extends Component {
   render() {
@@ -18,6 +19,12 @@ class Stage extends Component {
         return (
           <div className="container-fluid">
             <HistoryPlay />
+          </div>
+        );
+      case "CUSTOMER_PLAY":
+        return (
+          <div className="container-fluid">
+            <CustomerPlay />
           </div>
         );
       default:

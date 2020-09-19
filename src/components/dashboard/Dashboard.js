@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "../../styles/AppStyles.css";
 import HistoryCard from "../cards/HistoryCard";
 import TransactionCard from "../cards/TransactionCard";
+import CutomerCard from "../cards/CutomerCard";
 
 class Dashboard extends Component {
   render() {
@@ -13,6 +14,9 @@ class Dashboard extends Component {
           </div>
           <div className="col-sm-offset-2 col-sm-4">
             <HistoryCard />
+          </div>
+          <div className="col-sm-offset-2 col-sm-4">
+            <CutomerCard />
           </div>
         </div>
       </div>

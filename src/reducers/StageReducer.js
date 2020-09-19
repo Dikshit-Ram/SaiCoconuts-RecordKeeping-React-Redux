@@ -4,6 +4,8 @@ export default function stageReducer(state = { show: "" }, action) {
       return { ...state, show: action.displayForm };
     case "DISPLAY_HISTORY":
       return { ...state, show: action.displayForm };
+    case "DISPLAY_CUSTOMERS":
+      return { ...state, show: action.displayForm };
     default:
       return state;
   }
