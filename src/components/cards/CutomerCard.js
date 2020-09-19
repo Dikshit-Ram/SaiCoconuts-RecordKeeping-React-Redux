@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { bindActionCreators } from "redux";
-import * as historyActions from "../../actions/HistoryActions";
-import HistoryImage from "../../images/HistoryCard.png";
+import * as customerActions from "../../actions/CustomerActions";
+import CutomerImage from "../../images/CustomerCard.jpg";
 
-class HistoryCard extends Component {
+class CustomerCard extends Component {
   onClickDisplayForm() {
-    this.props.actions.displayHistory(this.props.show);
+    this.props.actions.displayCustomers(this.props.show);
   }
 
   render() {
@@ -15,11 +15,11 @@ class HistoryCard extends Component {
       <div className="row">
         <div className="col-md-6">
           <div className="container">
-            <div id="HistoryCard" className="card">
+            <div id="CustomerCard" className="card">
               <img
                 className="card-img-top"
-                src={HistoryImage}
-                alt="History Image"
+                src={CutomerImage}
+                alt="Customer Image"
               />
               <div className="card-body">
                 <a
@@ -27,7 +27,7 @@ class HistoryCard extends Component {
                   className="btn btn-primary"
                   onClick={this.onClickDisplayForm.bind(this)}
                 >
-                  Show Activity
+                  Customers
                 </a>
               </div>
             </div>
@@ -46,13 +46,13 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(historyActions, dispatch),
+    actions: bindActionCreators(customerActions, dispatch),
   };
 }
 
-HistoryCard.propTypes = {
+CustomerCard.propTypes = {
   show: PropTypes.string.isRequired,
   actions: PropTypes.object.isRequired,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(HistoryCard);
+export default connect(mapStateToProps, mapDispatchToProps)(CustomerCard);
