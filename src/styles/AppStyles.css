@@ -1,6 +1,5 @@
-#dashboard {
-    background-size:     cover;                      /* <------ */
-    background: url("../images/CoconutTree.jpg") no-repeat center center;
+#app {
+    background-size: cover;
     height: 100vh;
 }
 

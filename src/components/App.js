@@ -1,21 +1,32 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component } from "react";
 import Header from "./common/Header";
 import Dashboard from "./dashboard/Dashboard";
-import '../styles/AppStyles.css';
+import Stage from "./PlayArea/Stage";
+import "../styles/AppStyles.css";
+import CoconutImage from "../images/CoconutTree.jpg";
 
 class App extends Component {
-    render(){
-        return(
-            <div id="dashboard" className="container-fluid">
-                <Header/>
-                <div className="row">
-                    <div className="col-lg-4">
-                        <Dashboard />
-                    </div>
-                </div>
+  render() {
+    return (
+      <div>
+        <Header />
+        <div
+          id="app"
+          className="container-fluid"
+          style={{ backgroundImage: "url(" + CoconutImage + ")" }}
+        >
+          <div className="row">
+            <div className="col-sm">
+              <Dashboard />
             </div>
-        );
-    }
+          </div>
+          <div className="row">
+            <Stage />
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;

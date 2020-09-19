@@ -1,8 +1,8 @@
 import {combineReducers} from 'redux';
-import displayTransactionForm from './TransactionReducer';
+import stage from './StageReducer';
 
 const rootreducer = combineReducers({
-    displayTransactionForm
+    stage
 });
 
 export default rootreducer;

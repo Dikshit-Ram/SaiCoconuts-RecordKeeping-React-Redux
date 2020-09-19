@@ -1,6 +1,6 @@
-export function displayTransactionForm(action) {
-    return {
-        type: 'DISPLAY_TRANSACTION_FORM',
-        action
-    };
+export function displayTransactionForm(displayForm) {
+  return {
+    type: "DISPLAY_TRANSACTION_FORM",
+    displayForm: displayForm == "" ? "TRANSACTION_PLAY" : "",
+  };
 }
