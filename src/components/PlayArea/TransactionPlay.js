@@ -4,34 +4,42 @@ import { connect } from "react-redux";
 class TransactionPlay extends Component {
   handleInputChange() {}
 
-  createLabel(text, name, type) {
+  createLabel(text, name, type, placeholder = text) {
     return (
-      <div className="form-group">
-        <label>
-          {text}:
-          <input
-            name={name}
-            type={type}
-            value={this.state}
-            onChange={this.handleInputChange}
-          />
-        </label>
+      <div className="form-group  col-md-6">
+        <label>{text}:</label>
+        <input
+          name={name}
+          type={type}
+          className="form-control"
+          value={this.state}
+          placeholder={placeholder}
+          onChange={this.handleInputChange}
+        />
       </div>
     );
   }
 
   showTransactionPlay() {
     return (
-        <form>
+      <form>
+        <div className="form-row">
           {this.createLabel("Count", "count", "number")}
           {this.createLabel("Item", "item", "number")}
           {this.createLabel("Type", "type", "number")}
-          {this.createLabel("Customer", "customer", "number")}
+        </div>
+        <div className="form-row">
+          {this.createLabel("Customer", "customer", "text")}
+        </div>
+        <div className="form-row">
           {this.createLabel("Balance", "balance", "number")}
           {this.createLabel("Paid", "paid", "number")}
+        </div>
+        <div className="form-row">
           {this.createLabel("Notes", "notes", "text")}
-          <input type="submit" value="Submit" />
-        </form>
+        </div>
+        <input type="submit" className="btn btn-primary" value="Save record" />
+      </form>
     );
   }
 

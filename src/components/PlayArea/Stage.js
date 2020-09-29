@@ -7,30 +7,23 @@ import HistoryPlay from "./HistoryPlay";
 import CustomerPlay from "./CutomerPlay";
 
 class Stage extends Component {
-  render() {
+
+  getPlayOnStage() {
     switch (this.props.show) {
       case "TRANSACTION_PLAY":
-        return (
-          <div className="container-fluid">
-            <TransactionPlay />
-          </div>
-        );
+        return <TransactionPlay />
       case "HISTORY_PLAY":
-        return (
-          <div className="container-fluid">
-            <HistoryPlay />
-          </div>
-        );
+        return <HistoryPlay />
       case "CUSTOMER_PLAY":
-        return (
-          <div className="container-fluid">
-            <CustomerPlay />
-          </div>
-        );
+        return <CustomerPlay />
       default:
         return null;
     }
   }
+
+  render() {
+      return this.getPlayOnStage()
+    }
 }
 
 function mapStateToProps(state) {
