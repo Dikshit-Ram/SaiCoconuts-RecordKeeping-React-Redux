@@ -9,13 +9,13 @@ class Dashboard extends Component {
     return (
       <div className="container-fluid">
         <div className="row">
-          <div className="col-sm-offset-2 col-sm-4">
+          <div className="col-md-4">
             <TransactionCard />
           </div>
-          <div className="col-sm-offset-2 col-sm-4">
+          <div className="col-md-4">
             <HistoryCard />
           </div>
-          <div className="col-sm-offset-2 col-sm-4">
+          <div className="col-md-4">
             <CutomerCard />
           </div>
         </div>
