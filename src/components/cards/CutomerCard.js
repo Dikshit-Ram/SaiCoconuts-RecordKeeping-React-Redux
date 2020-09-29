@@ -3,7 +3,8 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { bindActionCreators } from "redux";
 import * as customerActions from "../../actions/CustomerActions";
-import CutomerImage from "../../images/CustomerCard.jpg";
+import CutomerImage from "../../images/CustomerCard.png";
+import "../../styles/CardStyles.css"
 
 class CustomerCard extends Component {
   onClickDisplayForm() {
